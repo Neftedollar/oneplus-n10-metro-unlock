@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oneplus-n10-param"
+version = "0.1.0"
+description = "Offline validator and trigger-image generator for OnePlus Nord N10 Metro param backups"
+readme = "README.md"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+authors = [{ name = "Neftedollar" }]
+requires-python = ">=3.11"
+dependencies = ["pycryptodome>=3.20,<4"]
+keywords = ["oneplus", "nord-n10", "be2025", "bootloader", "qualcomm"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: System :: Hardware",
+  "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/Neftedollar/oneplus-n10-metro-unlock"
+Repository = "https://github.com/Neftedollar/oneplus-n10-metro-unlock"
+Issues = "https://github.com/Neftedollar/oneplus-n10-metro-unlock/issues"
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9"]
+
+[project.scripts]
+oneplus-n10-param = "oneplus_n10_param.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+pythonpath = ["src"]
