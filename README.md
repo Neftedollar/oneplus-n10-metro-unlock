@@ -7,6 +7,7 @@ This project does **not** unlock a connected phone. It validates a 1 MiB `param`
 > [!CAUTION]
 > Writing `param`, letting ABL update RPMB, and unlocking the bootloader can erase all user data or permanently prevent normal boot. A file backup of `param` does not back up RPMB. Treat the RPMB change as potentially irreversible.
 
+- Full English guide: [docs/en.md](docs/en.md)
 - Russian guide: [docs/ru.md](docs/ru.md)
 - Recovery boundaries: [docs/recovery.md](docs/recovery.md)
 - Security policy: [SECURITY.md](SECURITY.md)
